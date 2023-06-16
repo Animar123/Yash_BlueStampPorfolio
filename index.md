@@ -1,7 +1,6 @@
 # BSE Projects
-| **Engineer** | **School** | **Area of Interest** | **Grade** |
+| **Yash C** | **Westmont High School** | **Computer Engineering** | **Incoming Senior** |
 |:--:|:--:|:--:|:--:|
-| Yash C | Westmont High School | Computer Engineering | Incoming Senior 
 
 # Final Milestone
 For your final milestone, explain the outcome of your project. Key details to include are:
