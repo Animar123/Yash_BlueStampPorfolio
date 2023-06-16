@@ -1,11 +1,6 @@
 # BSE Projects
-| **Name** | **School** | **Area of Interest** | **Grade** |
-|:--:|:--:|:--:|:--:|
-| Yash C | Westmont High School | Computer Engineering | Incoming Senior |
-|:--:|:--:|:--:|:--:|
-
 | **Yash C** | **Westmont High School** | **Computer Engineering** | **Incoming Senior** |
-|:--:|:--:|:--:|:--:|
+
 
 # Final Milestone
 
