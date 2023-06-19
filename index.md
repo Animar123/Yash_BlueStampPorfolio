@@ -329,7 +329,8 @@ This basic project allows for anyone to turn off any TV by simply turning the de
 // Code 000 -- Sony, Baur, Neckermann, Otto Versand, Palladium, Quelle, SEI, Sinudyne, Sonolor, Universu
 const struct powercode sonyCode PROGMEM = {
   freq_to_timerval(38400), // 38.4 KHz  
-  {{240, 60},{120, 60},{60 , 60},{120, 60},{60 , 60},
+  {
+  {240, 60},{120, 60},{60 , 60},{120, 60},{60 , 60},
    {120, 60},{60 , 60},{60 , 60},{120, 60},{60 , 60},
    {60 , 60},{60 , 60},{60 , 2700},{240, 60},{120, 60},
    {60 , 60},{120, 60},{60 , 60},{120, 60},{60 , 60},
