@@ -13,7 +13,7 @@ My project, Raspberry Pi Object Dection, utilizes a tensorflow and the YOLOv5 AP
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z9y6cRenPV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # Schematics 
-![Headstone Image](starter.png)
+![Headstone Image](raspPi4CamDiag.png)
 
 # Code
 ## Milestone One Code
