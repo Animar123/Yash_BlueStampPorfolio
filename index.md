@@ -17,7 +17,6 @@ My project, Raspberry Pi Object Dection, utilizes a tensorflow and the YOLOv5 AP
 
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
-
 ```c++
 void setup() {
   // put your setup code here, to run once:
@@ -30,6 +29,10 @@ void loop() {
 
 }
 ```
+
+## Starter Project Code
+
+
 
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
