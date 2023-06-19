@@ -326,14 +326,48 @@ This basic project allows for anyone to turn off any TV by simply turning the de
 ## Starter Project Code
 
 ```c++
-void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
-}
+// Code 000 -- Sony, Baur, Neckermann, Otto Versand, Palladium, Quelle, SEI, Sinudyne, Sonolor, Universu
+const struct powercode sonyCode PROGMEM = {
+  freq_to_timerval(38400), // 38.4 KHz  
+  {{240, 60},{120, 60},{60 , 60},{120, 60},{60 , 60},
+   {120, 60},{60 , 60},{60 , 60},{120, 60},{60 , 60},
+   {60 , 60},{60 , 60},{60 , 2700},{240, 60},{120, 60},
+   {60 , 60},{120, 60},{60 , 60},{120, 60},{60 , 60},
+   {60 , 60},{120, 60},{60 , 60},{60 , 60},{60 , 60},
+   {60 , 0}// end of code
+  }
+};
 
-void loop() {
-  // put your main code here, to run repeatedly:
+const uint16_t code_na000Times[] PROGMEM = {
 
-}
+   60, 60,
+   60, 2700,
+   120, 60,
+   240, 60,
+
+};
+
+// The structure of compressed code entries
+struct IrCode {
+  uint8_t timer_val;
+  uint8_t numpairs;
+  uint8_t bitcompression;
+  uint16_t const *times;
+  uint8_t codes[];
+};
+const struct IrCode code_na000Code PROGMEM = {
+        freq_to_timerval(38400),
+        26,             // # of pairs
+        2,              // # of bits per index
+        code_na000Times,
+        {
+                0xE2,
+                0x20,
+                0x80,
+                0x78,
+                0x88,
+                0x20,
+                0x10,
+        }
+};
 ```
