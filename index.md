@@ -40,17 +40,19 @@ To train a computer model, the first thing that I need are images, lots of them.
 |:--:|:--:|
 
 I utilized this <a href=" ttps://github.com/ultralytics/yolov5"> web scraper </a> scrapper of github. It searches google images for the top images for each quiry and downloads ammount that I desire for each category.
-picture
+
+<img src="webScrapperResults.png"  width="60%" height="40%">
 
 I then upload all the images all the images to robotflow, a free labeling and computer vision tool that works with yolov5 to label and train a model on.
 
-picture
+<img src="uploadedRoboFlow.png"  width="60%" height="40%">
+<img src="labelingImages.png"  width="60%" height="40%">
 
 Taking these images, I uploaded them into roboflow and started labeling them. I labeled the model of the phone (wheter it was an iphone, google pixel, oneplus, etc...), the logo of each phone (each company logo on the phone), and if here was any text on the phone (company brand like "Samsung","Google,"Oneplus") in hopes that if the model could recognize any one of these catigories it could recognize whether the phone was an apple or an android.
 
 After labeling these all the images and throwing out any null images (images that could not be used for training) purposes. I trained the model through model through roboflows free training program. The initial results were quite positive as the model could recognize the correct phone 78% of the time with mAP of 84%. Veiwing the live web cam feed the model works in real time and can correctly detect different types of phones
 
-picture
+<img src="recognizePhone.png"  width="60%" height="40%">
 
 # First Milestone
 
