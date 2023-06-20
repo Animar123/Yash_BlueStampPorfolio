@@ -43,6 +43,8 @@ Once all the libaries are installed I cloned the <a href=" ttps://github.com/ult
 
 Running the program: detect.py and feeding it an image
 
+<img src="TerminaDetectCMD.png"  width="40%" height="30%">
+<img src="ZidaneFound.png"  width="40%" height="30%">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z9y6cRenPV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # Schematics 
