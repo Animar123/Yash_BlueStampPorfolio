@@ -45,6 +45,13 @@ Running the program: detect.py and feeding it an image
 
 <img src="TerminaDetectCMD.png"  width="100%" height="100%">
 <img src="ZidaneFound.png"  width="40%" height="30%">
+
+The result of this was the raspberry PI being able to recognize the two people in the image, Zidane and Ancelotti, and thier ties. Yolov5 can recognize 80 different objects using its pretrained model. Yolov5 is one of  many tensorflow computer vision models avaiable to use. Yolov5 works great on a raspberry pi becasue it is one of the fastest computer vision models availabe and it does not use alot of proccessing power on the raspberry pi.
+
+I Modified the yolov5 detect.py code so that when it runs it would automatically take a picture using the aurdocam and run the image on the computer vision model to detect objects. The code for this is in the first milestone code section.
+
+<img src="ZidaneFound.png"  width="40%" height="30%">
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z9y6cRenPV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # Schematics 
