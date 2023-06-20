@@ -11,14 +11,14 @@
 
  My project, Raspberry Pi Object Dection, utilizes a tensorflow and the YOLOv5 API in order to reconize objects. My first milestone was installing OpenCV, TensorFlow, and other nessesary libraries onto the raspberry PI. To access the webcamera(), I use openCV in order to take pictures/videos and store them on the raspberry Pi. I then utilize tensorflow and the YOLOv5 model in order to recognize objects. I then wrote my own code in the detect.py program order for the raspberry PI to take a picture and then automatically analize it utilizing the model and display the result.
 
-Nessesary equipment:
+## Nessesary equipment:
 * Computer
 * Raspberry Pi 4 (64 bit)
 * Web Cam (Arducam is what I used)
 * 4k Video Capture Card
 
-## Installing nessesary packages
-In order for the project to work, it is nessesary to install the packages to run yolov5. PIP comes pre installed onto the raspberry pi 4. PIP allows for us to download the nessesary packages on to the raspberry pi through the terminal.When installing packges its important to create a virtual envoirment in order to store your libraries. This prevents you from having any dependency issues when utilizing your installed libraries. To create a virtual envoirment I ran the command below. I in my projects folder
+## Progress
+In order for the project to work, it is nessesary to install the packages to run yolov5. PIP comes pre installed onto the raspberry pi 4. PIP allows for the raspberry Pi to download the nessesary packages on to the raspberry pi through the terminal.When installing packges its important to create a virtual envoirment in order to store your libraries. This prevents you from having any dependency issues when utilizing your installed libraries. To create a virtual envoirment I ran the command below in my "projects" folder
 
 ```bash
 -m virtualenv env # this creates a virtual enviorment called env
@@ -36,6 +36,7 @@ pip install openCV-python
 sudo apt install libatlas-base-dev
 pip3 install tensorflow
 ```
+
 OpenCV is a library that allows us to edit, access, and manipulate images and videos through python
 Tensorflow is a libary made by google that allows for induviduals to create and run machine learning models on their computer
 
@@ -50,7 +51,17 @@ The result of this was the raspberry PI being able to recognize the two people i
 
 I Modified the yolov5 detect.py code so that when it runs it would automatically take a picture using the aurdocam and run the image on the computer vision model to detect objects. The code for this is in the first milestone code section.
 
-<img src="ZidaneFound.png"  width="40%" height="30%">
+<img src="detectWithCamera.png"  width="60%" height="40%">
+
+## Challenges
+
+While downloading openCV is realtivly easy, downloading tensorflow proves quite difficult. Depending on what you are doing you need to download the right version of tensorflow. The version that I downloaded is tensorflow 2.1. Some Machine Models require tensorflow lite to be installed on to the raspberry pi so making sure to download the right version of tensorflow is a must. Additionally, tensorflow needs additional packages to in order to run. There are alot off different things that make downloading tensorflow on the rapsberry pi quite difficult.
+
+Another challenge I faced was directory issues. Orginally when I used the detect.py program, I would have to store the image in the same folder as the detect.py program. This is why I edited the program to automatically take a picture for me so that way I do not have to keep moving image paths around.
+
+## Next Steps
+
+The next steps for me are to be able to train my own computer vison model to be able to detect things that I want. I want to see if I can detect the difference between an Iphone an an Android phone. I will collect and label a data set of phones and then see if it can recognize the difference between the two phones by training the model myself.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z9y6cRenPV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
