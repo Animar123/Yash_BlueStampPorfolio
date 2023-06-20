@@ -7,9 +7,56 @@
 
 # Second Milestone
 
+In my second milestone, I developed my own model and trained it in order to be able to recognize the difference between an iphone an an android phone. I utilzed a scrapper program that would download hundreds of images off the web and then label these images for the yolov5 program and roboflow model to train on. I would then use these train models to create a computer vision program that can recognize the difference.
+
+## Progress
+To train a computer model, the first thing that I need are images, lots of them. Small models need only a couple hundred images but larger computer vision models are trained on hundreds of thousands of images. Since it would take a long time to induviudaly download images of the internet I used a web scraper to this job for me. I can specify the amount of images I want to download for each quiery that I want to search.
+
+| **Search Quire** | **Number of images** |
+|:--:|:--:|
+| Iphone | 100 |
+|:--:|:--:|
+| Iphone 12 | 20 |
+|:--:|:--:|
+| Iphone 13 | 20 |
+|:--:|:--:|
+| Iphone 14 | 20 |
+|:--:|:--:|
+| Google Pixel 4 | 20 |
+|:--:|:--:|
+| Google Pixel 6 | 20 |
+|:--:|:--:|
+| Google Pixels | 100 |
+|:--:|:--:|
+| OnePlus 7pro | 50 |
+|:--:|:--:|
+| OnePlus phone | 50 |
+|:--:|:--:|
+| Samsung S21 | 20 |
+|:--:|:--:|
+| Samsung S22 | 20 |
+|:--:|:--:|
+| **Total Number of Images** | **480** |
+|:--:|:--:|
+
+I utilized this <a href=" ttps://github.com/ultralytics/yolov5"> web scraper </a> scrapper of github. It searches google images for the top images for each quiry and downloads ammount that I desire for each category.
+picture
+
+I then upload all the images all the images to robotflow, a free labeling and computer vision tool that works with yolov5 to label and train a model on.
+
+picture
+
+Taking these images, I uploaded them into roboflow and started labeling them. I labeled the model of the phone (wheter it was an iphone, google pixel, oneplus, etc...), the logo of each phone (each company logo on the phone), and if here was any text on the phone (company brand like "Samsung","Google,"Oneplus") in hopes that if the model could recognize any one of these catigories it could recognize whether the phone was an apple or an android.
+
+After labeling these all the images and throwing out any null images (images that could not be used for training) purposes. I trained the model through model through roboflows free training program. The initial results were quite positive as the model could recognize the correct phone 78% of the time with mAP of 84%. Veiwing the live web cam feed the model works in real time and can correctly detect different types of phones
+
+picture
+
 # First Milestone
 
- My project, Raspberry Pi Object Dection, utilizes a tensorflow and the YOLOv5 API in order to reconize objects. My first milestone was installing OpenCV, TensorFlow, and other nessesary libraries onto the raspberry PI. To access the webcamera(), I use openCV in order to take pictures/videos and store them on the raspberry Pi. I then utilize tensorflow and the YOLOv5 model in order to recognize objects. I then wrote my own code in the detect.py program order for the raspberry PI to take a picture and then automatically analize it utilizing the model and display the result.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Z9y6cRenPV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+My project, Raspberry Pi Object Dection through machine learning, utilizes tensorflow and YOLOv5 API in order to detect objects. My first milestone was installing OpenCV, TensorFlow, and other nessesary libraries onto the raspberry PI. To access the webcamera(), I use openCV in order to take pictures/videos and store them on the raspberry Pi. I then utilize tensorflow and the YOLOv5 model in order to recognize objects. I then wrote my own code in the detect.py program order for the raspberry PI to take a picture and then automatically analize it utilizing the model and display the result.
 
 ## Nessesary equipment:
 * Computer
@@ -62,8 +109,6 @@ Another challenge I faced was directory issues. Orginally when I used the detect
 ## Next Steps
 
 The next steps for me are to be able to train my own computer vison model to be able to detect things that I want. I want to see if I can detect the difference between an Iphone an an Android phone. I will collect and label a data set of phones and then see if it can recognize the difference between the two phones by training the model myself.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Z9y6cRenPV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 # Schematics 
 ![Headstone Image](raspPi4CamDiag.png)
