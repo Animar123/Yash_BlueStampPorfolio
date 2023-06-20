@@ -6,10 +6,42 @@
 
 
 # Second Milestone
-<img src="starter.png"  width="600" height="300">
 
 # First Milestone
-My project, Raspberry Pi Object Dection, utilizes a tensorflow and the YOLOv5 API in order to reconize objects. My first milestone was installing OpenCV, TensorFlow, and other nessesary libraries onto the raspberry PI. To access the camera, I use openCV in order to take pictures/videos and store them on the raspberry Pi. I then utilize tensorflow and the YOLOv5 model in order to recognize objects. I then wrote my own code in the detect.py program order for the raspberry PI to take a picture and then automatically analize it utilizing the model and display the result.
+
+    My project, Raspberry Pi Object Dection, utilizes a tensorflow and the YOLOv5 API in order to reconize objects. My first milestone was installing OpenCV, TensorFlow, and other nessesary libraries onto the raspberry PI. To access the webcamera(), I use openCV in order to take pictures/videos and store them on the raspberry Pi. I then utilize tensorflow and the YOLOv5 model in order to recognize objects. I then wrote my own code in the detect.py program order for the raspberry PI to take a picture and then automatically analize it utilizing the model and display the result.
+
+Nessesary equipment:
+* Computer
+* Raspberry Pi 4 (64 bit)
+* Web Cam (Arducam is what I used)
+* 4k Video Capture Card
+
+## Installing nessesary packages
+    In order for the project to work, it is nessesary to install the packages to run yolov5. PIP comes pre installed onto the raspberry pi 4. PIP allows for us to download the nessesary packages on to the raspberry pi through the terminal.When installing packges its important to create a virtual envoirment in order to store your libraries. This prevents you from having any dependency issues when utilizing your installed libraries. To create a virtual envoirment I ran the command below. I in my projects folder
+
+```bash
+-m virtualenv env # this creates a virtual enviorment called env
+```
+To access my enviorment I ran the following code.
+
+```bash
+source env/bin/activate 
+```
+
+I installed openCV and Tensorflow utilzing the following commands.
+
+```bash
+pip install openCV-python
+sudo apt install libatlas-base-dev
+pip3 install tensorflow
+```
+OpenCV is a library that allows us to edit, access, and manipulate images and videos through python
+Tensorflow is a libary made by google that allows for induviduals to create and run machine learning models on their computer
+
+Once all the libaries are installed I cloned the <a href=" ttps://github.com/ultralytics/yolov5"> YoloV5 </a> in order to get the machine learning model and be able to run the computer vision code.
+
+Running the program: detect.py and feeding it an image
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z9y6cRenPV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -17,8 +49,11 @@ My project, Raspberry Pi Object Dection, utilizes a tensorflow and the YOLOv5 AP
 ![Headstone Image](raspPi4CamDiag.png)
 
 # Code
+All code for this project is written in python
+
 ## Milestone One Code
-This code allows for the user to take a picture and directly get an output on wheter any objects were detected
+This code allows for the user to take a picture and directly get an output on wheter any objects were detected and what objects were detected.
+detect.py (modified to take a picture using webcam and automatically analyze image):
 ```python
 import argparse
 import os
@@ -44,16 +79,16 @@ from utils.torch_utils import select_device, smart_inference_mode
 
 @smart_inference_mode()
 def takePicture():
-    p = "images/image.jpg"
-    cap = cv2.VideoCapture(0)
+    p = "images/image.jpg" #saves image path to images folder
+    cap = cv2.VideoCapture(0) #captures image frame from webcam
 
     ret, frame = cap.read()
 
     if ret:
-        cv2.imwrite(p,frame)
+        cv2.imwrite(p,frame) # saves image to path
 
     cap.release()
-    return p
+    return p #returns path
 def run(
         weights=ROOT / 'yolov5s.pt',  # model path or triton URL
         source=ROOT / takePicture(),  # file/dir/URL/glob/screen/0(webcam)
@@ -267,12 +302,12 @@ Picture testing code on Raspberry Pi 4
 ``` python
 import cv2
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(0) # captures frame from ArduCam
 
-ret, frame = cap.read()
+ret, frame = cap.read() 
 
 if ret:
-cv2.imwrite("image.jpg",frame)
+cv2.imwrite("image.jpg",frame) # saves frame and names it "image.jpg"
 
 
 cap.release()
@@ -282,29 +317,20 @@ Video testing code on Raspberry Pi 4
 ``` python
 import cv2
  
- 
-# define a video capture object
-vid = cv2.VideoCapture(0)
+vid = cv2.VideoCapture(0) # define a video capture object
  
 while(True):
-     
-    # Capture the video frame
-    # by frame
-    ret, frame = vid.read()
+
+    ret, frame = vid.read() # Capture the video frame by frame
  
-    # Display the resulting frame
-    cv2.imshow('frame', frame)
+    
+    cv2.imshow('frame', frame) # Display the resulting frame
      
-    # the 'q' button is set as the
-    # quitting button you may use any
-    # desired button of your choice
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(1) & 0xFF == ord('q'):  # the 'q' button is set as the quitting button 
         break
  
-# After the loop release the cap object
-vid.release()
-# Destroy all the windows
-cv2.destroyAllWindows()
+vid.release() # After the loop release the cap object
+cv2.destroyAllWindows() # Destroy all the windows
 ```
 
 # Bill of Materials
@@ -320,7 +346,8 @@ Here is the bill of materials for my project, excluding a peripherals and a comp
 |:--:|:--:|:--:|:--:|
 
 # Starter Project
-![Headstone Image](starter.png)
+<img src="starter.png"  width="40%" height="30%">
+
 This basic project allows for anyone to turn off any TV by simply turning the device on and pointing it at the TV. It then emmits a IR light that will turn of any TV. The project was great for learning how to solder and understanding basic electronics. The project consists of a batery, resistors, transistors, capasitors, and IR leds. One major struggel that I had during the project was accidentally saudering a transistor backwards. I had to desoder the transistor which took ages to do. None the less the project turned out great, and I was able to turn off my TV!
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kJ5Td9zzF3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -340,24 +367,25 @@ const struct powercode sonyCode PROGMEM = {
   }
 };
 
-const uint16_t code_na000Times[] PROGMEM = {
-
+const uint16_t code_na000Times[] PROGMEM = 
+{
    60, 60,
    60, 2700,
    120, 60,
    240, 60,
-
 };
 
 // The structure of compressed code entries
-struct IrCode {
+struct IrCode 
+{
   uint8_t timer_val;
   uint8_t numpairs;
   uint8_t bitcompression;
   uint16_t const *times;
   uint8_t codes[];
 };
-const struct IrCode code_na000Code PROGMEM = {
+const struct IrCode code_na000Code PROGMEM = 
+{
         freq_to_timerval(38400),
         26,             // # of pairs
         2,              // # of bits per index
