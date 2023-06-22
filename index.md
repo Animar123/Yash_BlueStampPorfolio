@@ -50,6 +50,7 @@ I utilized this <a href=" ttps://github.com/ultralytics/yolov5"> web scraper </a
 I then upload all the images all the images to robotflow, a free labeling and computer vision tool that works with yolov5 to label and train a model on.
 
 <img src="uploadedRoboFlow.png"  width="60%" height="40%">
+
 <img src="labelingImages.png"  width="60%" height="40%">
 
 Taking these images, I uploaded them into roboflow and started labeling them. I labeled the model of the phone (wheter it was an iphone, google pixel, oneplus, etc...), the logo of each phone (each company logo on the phone), and if here was any text on the phone (company brand like "Samsung","Google,"Oneplus") in hopes that if the model could recognize any one of these catigories it could recognize whether the phone was an apple or an android.
