@@ -64,16 +64,18 @@ While the intial results were fantastic, I wanted to see if I could improve the 
 
 Another thing that I did was utilize transfer learning. Essential whenver you train a model, it recognizes patterns to be able to recognize objects. But when a ne train model is compiled it does not used the previously trained model to automatically recognzie these patterns and build upon them. This is where transferlearning comes into play. Transfer learning allows for training models to look at previous builds in order to build on previous training models learning, to save time and build a much more accurate model.
 
-<img src="recognizePhone.png"  width="60%" height="40%">
+<img src="transferLearning.png"  width="60%" height="40%">
 
 Through augmentation and transfer learning, My model improved by nearly 10 percent.
 
 <img src="recognizePhone.png"  width="60%" height="40%">
+<img src="recognizePhone.png"  width="60%" height="40%">
+
 
 While training the model on roboflow worked well, I also wanted to train the model my self to see if wheter my accuracy would change. In order for this to be possible I would need acces to a GPU to be able to handdale the advanced processing that is infovleved to train a computer vision model. Roboflow lets me donwload my labeld images so that I can feed it into a training program. I then utilized google colabs to train my model becasue it provides a free GPU for me to train my images on. I then ran some code that would access my labeled images through the roboflow API and than ran train.py program in YOLOv5. I set the model to be trained with 50 iterations (epochs) the model that was trained in used over 100 epochs. In roboflow, the expected model accuary when trained with 50 epoch is around 71-75%. My trained model came out toe be around 74.2% accurate which matches with the predectied results.
 
-<img src="mAP1"  width="60%" height="40%">
-<img src="mAP2"  width="60%" height="40%">
+<img src="mAP1.png"  width="60%" height="40%">
+<img src="mAP2.png"  width="60%" height="40%">
 Roboflow predicted training model results based on their model training
 
 <img src="myTrainingResults.png"  width="60%" height="40%">
