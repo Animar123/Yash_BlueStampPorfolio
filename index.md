@@ -88,6 +88,14 @@ Results from my trained model
 
 ## Chalenges
 
+One of the biggest challenges was labeling images due to how time instesive it is. Additinolly making use that labels are correctly placed and that bounding boxes accuratly fit the phone proves quite tedious. Another challenge that I faced was finding enough images that met my requirements. I needed images of phones back side, since I did not want the model to be able to recognize phones from the front. Finding enough images to be able to train the model proved difficult becasue models need a large amount of images in order to be trained. To solve this problem I utilzies augmentation to provide similar images to the ones that I found this time to meet the required picutre threshold to run the training model.
+
+Another thing that was difficult was training the model myself. Orginially, I watned to train the model using a raspberry PI. This would not work for a variety of reasons, for one the raspberry PI does not have a GPU which is required to train a model using YOLOv5, and two the raspberry PI does not have enough proccesing power to be able to train it using CPU power. As a result, I used google colabs and accessed a free GPU to train the models.
+
+## Next Steps
+
+The next step is to make the computer vision a real time tracking model on a raspberry PI. Given the PI's limited processesing power, I think it would be quite impressive to make the PI accuratly track objects with out any lag.
+
 # First Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z9y6cRenPV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
