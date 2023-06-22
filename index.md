@@ -1,5 +1,9 @@
-# BSE Projects
-| **Yash C** | **Westmont High School** | **Computer Engineering** | **Incoming Senior** |
+# Object Detection Through Machine Tearning on Raspberry PI
+
+| **Name** | **High School** | **Field of Interest** | **Grade** |
+|:--:|:--:|:--:|:--:|
+| Yash C | Westmont High School | Computer Engineering | Rising Senior |
+|:--:|:--:|:--:|:--:|
 
 
 # Final Milestone
@@ -53,6 +57,29 @@ Taking these images, I uploaded them into roboflow and started labeling them. I 
 After labeling these all the images and throwing out any null images (images that could not be used for training) purposes. I trained the model through model through roboflows free training program. The initial results were quite positive as the model could recognize the correct phone 78% of the time with mAP of 84%. Veiwing the live web cam feed the model works in real time and can correctly detect different types of phones
 
 <img src="recognizePhone.png"  width="60%" height="40%">
+
+While the intial results were fantastic, I wanted to see if I could improve the model even further. Reaserhcing on ways to imporve, one way to make the model more accurate is to feed the train the model on more images. However, we have already searched for the top image results online and it would be quite difficult to find new quailty images to feed the model. Instead, I augmented the images; augmenting the images creates copies of the images and changing them in some way shape or form (by rotating the images, croping the images, fliping the images). By doing this, the model created 600 "new" images that model can use to train on and get better
+
+<img src="recognizePhone.png"  width="60%" height="40%">
+
+Another thing that I did was utilize transfer learning. Essential whenver you train a model, it recognizes patterns to be able to recognize objects. But when a ne train model is compiled it does not used the previously trained model to automatically recognzie these patterns and build upon them. This is where transferlearning comes into play. Transfer learning allows for training models to look at previous builds in order to build on previous training models learning, to save time and build a much more accurate model.
+
+<img src="recognizePhone.png"  width="60%" height="40%">
+
+Through augmentation and transfer learning, My model improved by nearly 10 percent.
+
+<img src="recognizePhone.png"  width="60%" height="40%">
+
+While training the model on roboflow worked well, I also wanted to train the model my self to see if wheter my accuracy would change. In order for this to be possible I would need acces to a GPU to be able to handdale the advanced processing that is infovleved to train a computer vision model. Roboflow lets me donwload my labeld images so that I can feed it into a training program. I then utilized google colabs to train my model becasue it provides a free GPU for me to train my images on. I then ran some code that would access my labeled images through the roboflow API and than ran train.py program in YOLOv5. I set the model to be trained with 50 iterations (epochs) the model that was trained in used over 100 epochs. In roboflow, the expected model accuary when trained with 50 epoch is around 71-75%. My trained model came out toe be around 74.2% accurate which matches with the predectied results.
+
+<img src="recognizePhone.png"  width="60%" height="40%">
+<img src="recognizePhone.png"  width="60%" height="40%">
+Roboflow predicted training model results based on their model training
+
+<img src="recognizePhone.png"  width="60%" height="40%">
+Results from my trained model
+
+## Chalenges
 
 # First Milestone
 
