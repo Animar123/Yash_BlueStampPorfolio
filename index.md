@@ -5,6 +5,7 @@
 | Yash C | Westmont High School | Computer Engineering | Rising Senior |
 |:--:|:--:|:--:|:--:|
 
+![Headstone Image](Yash-Headshot.png){:height = "50%" width = "50%"}
 
 # Final Milestone
 
