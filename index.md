@@ -69,9 +69,9 @@ Another thing that I did was utilize transfer learning. Essential whenver you tr
 
 Through augmentation and transfer learning, My model improved by nearly 10 percent.
 
-<img src="recognizePhone.png"  width="60%" height="40%">
+<img src= "roboflowT1.png"  width="60%" height="40%">
 
-<img src="recognizePhone.png"  width="60%" height="40%">
+<img src= "roboflowT2.png"  width="60%" height="40%">
 
 
 While training the model on roboflow worked well, I also wanted to train the model my self to see if wheter my accuracy would change. In order for this to be possible I would need acces to a GPU to be able to handdale the advanced processing that is infovleved to train a computer vision model. Roboflow lets me donwload my labeld images so that I can feed it into a training program. I then utilized google colabs to train my model becasue it provides a free GPU for me to train my images on. I then ran some code that would access my labeled images through the roboflow API and than ran train.py program in YOLOv5. I set the model to be trained with 50 iterations (epochs) the model that was trained in used over 100 epochs. In roboflow, the expected model accuary when trained with 50 epoch is around 71-75%. My trained model came out toe be around 74.2% accurate which matches with the predectied results.
