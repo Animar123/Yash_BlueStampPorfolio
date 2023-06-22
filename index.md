@@ -1,4 +1,4 @@
-# Object Detection Through Machine Tearning on Raspberry PI
+# Object Detection Through Machine Learning on Raspberry PI
 
 | **Name** | **High School** | **Field of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
