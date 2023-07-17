@@ -27,7 +27,28 @@ After installing the nesseary packages, I needed to get the computer vision mode
 git clone https://github.com/tensorflow/examples.git
 ```
 
-Downloading this library allows me to get access to all the possible models that can work on a raspberry PI using tensorflow lite. However, I only be using the object detection library for what I am doing.
+Downloading this library allows me to get access to all the possible models that can work on a raspberry PI using tensorflow lite. However, I only be using the object detection library for what I am doing. I then need to run this command to get the nessesary packages in order to run the object detection software that runs tensorflow lite.
+
+```bash
+cd examples/lite/examples/object_detection/raspberry_pi
+
+# The script install the required dependencies and download the TFLite models.
+sh setup.sh
+```
+Now that I have all the libraries and files needed to use tensorflow lite, I run the "detect.py" file located in "examples/lite/examples/object_detection/raspberry_pi" directory
+
+```bash
+python3 detect.py
+```
+The result is a tensorflow lite real time computer vision model opperating at 10 fps that can detect objects.
+
+#image
+
+Compared to running a normal tensorflow object detection model like YOLOv5 in realtime on a raspberry PI. The real time object detection model using tensor flow can run 10 times faster than other computer vision models using tensorflow due to is optimized machine learning models.
+
+image1
+image2
+
 
 # Second Milestone
 
