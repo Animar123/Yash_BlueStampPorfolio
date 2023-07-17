@@ -9,6 +9,25 @@
 
 # Final Milestone
 
+In my third and final milestone, I implemeted an object detection software using tensorflow lite that allowed me to implemnt realtime objectdetection on the raspberry PI. I utilizeds google's tensorflow github library to use thier optimzed tensorflow computer vision model on the raspberry PI for fast realtime object detection and computer vision.
+
+## Progress
+
+To impletment tensorflow lite on a raspberry PI, I needed to download different packages than what I already had from downloading tensorflow 2.1 on my raspberry PI. To do this, I used the command below to install the nessary packages in my virtual library:
+
+```bash
+pip install tflite-support
+# I have already downloaded openCV in a previos milestone
+# Open CV is nessesary to run the live streamed computer vision model
+pip install openCV-python
+```
+After installing the nesseary packages, I needed to get the computer vision model that runs on the raspberry PI made by tensorflow off github. To do this I cloned the "examples" from the tensorflow library off github
+
+```bash
+git clone https://github.com/tensorflow/examples.git
+```
+
+Downloading this library allows me to get access to all the possible models that can work on a raspberry PI using tensorflow lite. However, I only be using the object detection library for what I am doing.
 
 # Second Milestone
 
