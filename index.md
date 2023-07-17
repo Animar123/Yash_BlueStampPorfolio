@@ -54,13 +54,17 @@ Compared to running a normal tensorflow object detection model like YOLOv5 in re
 
 ## Chalenges
 
-
+One of the biggest challenges with this final milestone was understanding how tensorflow lite worked and making sure that I had the right dependencies for the detection software for me to work. While tensorflow lite is similar to tensorflow, it has some key differences, becasue it can only be used for making infrences and is optimized to do so it uses different commands and different functions than tensorflow. Making sure that I understood those differences was challenging but imporant in being able to understand how my code worked. Additionally because i had already installed tensorflow, I had to make sure that i had the correct dipendinces in the right folder in my virtual enviornment to make sure that tensorflow lite had the nessesary requirements.
 
 ## Next Steps
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Lyh84KMqUPI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Following the video above, I am going to combine the apps that I have developed in my first and second milestone with my third milestone to create a realtime computervison model on the raspberry PI using tensorflow lite.
 
 
 # Second Milestone
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/orN371a4sUM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 In my second milestone, I developed my own model and trained it in order to be able to recognize the difference between an iphone an an android phone. I utilzed a scrapper program that would download hundreds of images off the web and then label these images for the yolov5 program and roboflow model to train on. I would then use these train models to create a computer vision program that can recognize the difference.
