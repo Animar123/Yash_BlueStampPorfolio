@@ -52,8 +52,16 @@ Compared to running a normal tensorflow object detection model like YOLOv5 in re
     <img src="tfl comparison.png"  width="40%" height="30%">
 </p>
 
+## Chalenges
+
+
+
+## Next Steps
+
+
 
 # Second Milestone
+<iframe width="560" height="315" src="https://www.youtube.com/embed/orN371a4sUM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 In my second milestone, I developed my own model and trained it in order to be able to recognize the difference between an iphone an an android phone. I utilzed a scrapper program that would download hundreds of images off the web and then label these images for the yolov5 program and roboflow model to train on. I would then use these train models to create a computer vision program that can recognize the difference.
 
