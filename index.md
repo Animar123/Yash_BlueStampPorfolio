@@ -42,12 +42,11 @@ python3 detect.py
 ```
 The result is a tensorflow lite real time computer vision model opperating at 10 fps that can detect objects.
 
-#image
+![](cv_gif_AdobeExpress.gif)
 
-Compared to running a normal tensorflow object detection model like YOLOv5 in realtime on a raspberry PI. The real time object detection model using tensor flow can run 10 times faster than other computer vision models using tensorflow due to is optimized machine learning models.
+Compared to running a normal tensorflow object detection model like YOLOv5 in realtime on a raspberry PI. The real time object detection model using tensor flow can run 5 times faster than other computer vision models using tensorflow due to is optimized machine learning models.
 
-image1
-image2
+<img src="tf comparison.png"  width="60%" height="40%"> <img src="tfl comparison.png"  width="60%" height="40%">
 
 
 # Second Milestone
