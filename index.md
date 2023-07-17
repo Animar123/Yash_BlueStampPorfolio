@@ -46,7 +46,11 @@ The result is a tensorflow lite real time computer vision model opperating at 10
 
 Compared to running a normal tensorflow object detection model like YOLOv5 in realtime on a raspberry PI. The real time object detection model using tensor flow can run 5 times faster than other computer vision models using tensorflow due to is optimized machine learning models.
 
-<img src="tf comparison.png"  width="40%" height="30%"> <img src="tfl comparison.png"  width="40%" height="30%">
+
+<p float="left">
+    <img src="tf comparison.png"  width="40%" height="30%">
+    <img src="tfl comparison.png"  width="40%" height="30%">
+</p>
 
 
 # Second Milestone
