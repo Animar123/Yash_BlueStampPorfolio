@@ -9,11 +9,11 @@
 
 # Final Milestone
 
-In my third and final milestone, I implemeted an object detection software using tensorflow lite that allowed me to implemnt realtime objectdetection on the raspberry PI. I utilizeds google's tensorflow github library to use thier optimzed tensorflow computer vision model on the raspberry PI for fast realtime object detection and computer vision.
+In my third and final milestone, I implemented an object detection software using tensorflow lite that allowed me to implement real time object detection on the raspberry PI. I utilize google’s tensorflow github library to use their optimized tensorflow computer vision model on the raspberry PI for fast real time object detection and computer vision.
 
 ## Progress
 
-To impletment tensorflow lite on a raspberry PI, I needed to download different packages than what I already had from downloading tensorflow 2.1 on my raspberry PI. To do this, I used the command below to install the nessary packages in my virtual library:
+To implement tensorflow lite on a raspberry PI, I needed to download different packages than what I already had from downloading tensorflow 2.1 on my raspberry PI. To do this, I used the command below to install the necessary packages in my virtual library:
 
 ```bash
 pip install tflite-support
@@ -21,13 +21,13 @@ pip install tflite-support
 # Open CV is nessesary to run the live streamed computer vision model
 pip install openCV-python
 ```
-After installing the nesseary packages, I needed to get the computer vision model that runs on the raspberry PI made by tensorflow off github. To do this I cloned the "examples" from the tensorflow library off github
+After installing the necessary packages, I needed to get the computer vision model that runs on the raspberry PI made by tensorflow off github. To do this I cloned the "examples'' from the tensorflow library off github
 
 ```bash
 git clone https://github.com/tensorflow/examples.git
 ```
 
-Downloading this library allows me to get access to all the possible models that can work on a raspberry PI using tensorflow lite. However, I only be using the object detection library for what I am doing. I then need to run this command to get the nessesary packages in order to run the object detection software that runs tensorflow lite.
+Downloading this library allows me to get access to all the possible models that can work on a raspberry PI using tensorflow lite. However, I am only using the object detection library for what I am doing. I then need to run this command to get the necessary packages in order to run the object detection software that runs tensorflow lite.
 
 ```bash
 cd examples/lite/examples/object_detection/raspberry_pi
@@ -40,12 +40,11 @@ Now that I have all the libraries and files needed to use tensorflow lite, I run
 ```bash
 python3 detect.py
 ```
-The result is a tensorflow lite real time computer vision model opperating at 10 fps that can detect objects.
+The result is a tensorflow lite real time computer vision model operating at 10 fps that can detect objects.
 
 ![](cv_gif_AdobeExpress.gif)
 
-Compared to running a normal tensorflow object detection model like YOLOv5 in realtime on a raspberry PI. The real time object detection model using tensor flow can run 5 times faster than other computer vision models using tensorflow due to is optimized machine learning models.
-
+Compared to running a normal tensorflow object detection model like YOLOv5 in real time on a raspberry PI. The real time object detection model using tensor flow can run 5 times faster than other computer vision models using tensorflow due to its optimized machine learning models.
 
 <p float="left">
     <img src="tf comparison.png"  width="40%" height="30%">
@@ -54,7 +53,7 @@ Compared to running a normal tensorflow object detection model like YOLOv5 in re
 
 ## Chalenges
 
-One of the biggest challenges with this final milestone was understanding how tensorflow lite worked and making sure that I had the right dependencies for the detection software for me to work. While tensorflow lite is similar to tensorflow, it has some key differences, becasue it can only be used for making infrences and is optimized to do so it uses different commands and different functions than tensorflow. Making sure that I understood those differences was challenging but imporant in being able to understand how my code worked. Additionally because i had already installed tensorflow, I had to make sure that i had the correct dipendinces in the right folder in my virtual enviornment to make sure that tensorflow lite had the nessesary requirements.
+One of the biggest challenges with this final milestone was understanding how tensorflow lite worked and making sure that I had the right dependencies for the detection software for me to work. While tensorflow lite is similar to tensorflow, it has some key differences, because it can only be used for making inferences and is optimized to do so it uses different commands and different functions than tensorflow. Making sure that I understood those differences was challenging but important in being able to understand how my code worked. Additionally, because I had already installed tensorflow, I had to make sure that I had the correct dependencies in the right folder in my virtual environment to make sure that tensorflow lite had the necessary requirements.
 
 ## Next Steps
 
@@ -67,10 +66,10 @@ Following the video above, I am going to combine the apps that I have developed 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/orN371a4sUM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-In my second milestone, I developed my own model and trained it in order to be able to recognize the difference between an iphone an an android phone. I utilzed a scrapper program that would download hundreds of images off the web and then label these images for the yolov5 program and roboflow model to train on. I would then use these train models to create a computer vision program that can recognize the difference.
+In my second milestone, I developed my own model and trained it in order to be able to recognize the difference between an iphone and an android phone. I utilized a scrapper program that would download hundreds of images off the web and then label these images for the yolov5 program and roboflow model to train on. I would then use these train models to create a computer vision program that can recognize the difference.
 
 ## Progress
-To train a computer model, the first thing that I need are images, lots of them. Small models need only a couple hundred images but larger computer vision models are trained on hundreds of thousands of images. Since it would take a long time to induviudaly download images of the internet I used a web scraper to this job for me. I can specify the amount of images I want to download for each quiery that I want to search.
+To train a computer model, the first thing that I need are images, lots of them. Small models need only a couple hundred images but larger computer vision models are trained on hundreds of thousands of images. Since it would take a long time to individually download images from the internet I used a web scraper for this job for me. I can specify the amount of images I want to download for each query that I want to search.
 
 | **Search Quire** | **Number of images** |
 |:--:|:--:|
@@ -109,17 +108,17 @@ I then upload all the images all the images to robotflow, a free labeling and co
 
 <img src="labelingImages.png"  width="60%" height="40%">
 
-Taking these images, I uploaded them into roboflow and started labeling them. I labeled the model of the phone (wheter it was an iphone, google pixel, oneplus, etc...), the logo of each phone (each company logo on the phone), and if here was any text on the phone (company brand like "Samsung","Google,"Oneplus") in hopes that if the model could recognize any one of these catigories it could recognize whether the phone was an apple or an android.
+Taking these images, I uploaded them into roboflow and started labeling them. I labeled the model of the phone (whether it was an iphone, google pixel, oneplus, etc...), the logo of each phone (each company logo on the phone), and if here was any text on the phone (company brand like "Samsung","Google,"Oneplus") in hopes that if the model could recognize any one of these categories it could recognize whether the phone was an apple or an android.
 
-After labeling these all the images and throwing out any null images (images that could not be used for training) purposes. I trained the model through model through roboflows free training program. The initial results were quite positive as the model could recognize the correct phone 78% of the time with mAP of 84%. Veiwing the live web cam feed the model works in real time and can correctly detect different types of phones
+After labeling these all the images and throwing out any null images (images that could not be used for training) purposes. I trained a model through roboflows free training program. The initial results were quite positive as the model could recognize the correct phone 78% of the time with mAP of 84%. Viewing the live webcam feed the model works in real time and can correctly detect different types of phones
 
 <img src="recognizePhone.png"  width="60%" height="40%">
 
-While the intial results were fantastic, I wanted to see if I could improve the model even further. Reaserhcing on ways to imporve, one way to make the model more accurate is to feed the train the model on more images. However, we have already searched for the top image results online and it would be quite difficult to find new quailty images to feed the model. Instead, I augmented the images; augmenting the images creates copies of the images and changing them in some way shape or form (by rotating the images, croping the images, fliping the images). By doing this, the model created 600 "new" images that model can use to train on and get better
+While the initial results were fantastic, I wanted to see if I could improve the model even further. Researching on ways to improve, one way to make the model more accurate is to feed the trained model on more images. However, we have already searched for the top image results online and it would be quite difficult to find new quality images to feed the model. Instead, I augmented the images; augmenting the images creates copies of the images and changing them in some way shape or form (by rotating the images, cropping the images, flipping the images). By doing this, the model created 600 "new" images that the model can use to train on and get better.
 
 <img src="augmentation.png"  width="60%" height="40%">
 
-Another thing that I did was utilize transfer learning. Essential whenver you train a model, it recognizes patterns to be able to recognize objects. But when a ne train model is compiled it does not used the previously trained model to automatically recognzie these patterns and build upon them. This is where transferlearning comes into play. Transfer learning allows for training models to look at previous builds in order to build on previous training models learning, to save time and build a much more accurate model.
+Another thing that I did was utilize transfer learning. Essentially whenever you train a model, it recognizes patterns to be able to recognize objects. But when a new train model is compiled it does not use the previously trained model to automatically recognize these patterns and build upon them. This is where transfer learning comes into play. Transfer learning allows for training models to look at previous builds in order to build on previous training models learning, to save time and build a much more accurate model.
 
 <img src="transferLearning.png"  width="60%" height="40%">
 
@@ -130,7 +129,7 @@ Through augmentation and transfer learning, My model improved by nearly 10 perce
 <img src= "roboflowT2.png"  width="60%" height="40%">
 
 
-While training the model on roboflow worked well, I also wanted to train the model my self to see if wheter my accuracy would change. In order for this to be possible I would need acces to a GPU to be able to handdale the advanced processing that is infovleved to train a computer vision model. Roboflow lets me donwload my labeld images so that I can feed it into a training program. I then utilized google colabs to train my model becasue it provides a free GPU for me to train my images on. I then ran some code that would access my labeled images through the roboflow API and than ran train.py program in YOLOv5. I set the model to be trained with 50 iterations (epochs) the model that was trained in used over 100 epochs. In roboflow, the expected model accuary when trained with 50 epoch is around 71-75%. My trained model came out toe be around 74.2% accurate which matches with the predectied results.
+While training the model on roboflow worked well, I also wanted to train the model myself to see whether my accuracy would change. In order for this to be possible I would need access to a GPU to be able to handle the advanced processing that is involved to train a computer vision model. Roboflow lets me download my labeled images so that I can feed it into a training program. I then utilized google colabs to train my model because it provides a free GPU for me to train my images on. I then ran some code that would access my labeled images through the roboflow API and than ran train.py program in YOLOv5. I set the model to be trained with 50 iterations (epochs) the model that was trained in used over 100 epochs. In roboflow, the expected model accuracy when trained with 50 epochs is around 71-75%. My trained model came out to be around 74.2% accurate which matches with the predicted results.
 
 <img src="mAP1.png"  width="60%" height="40%">
 
@@ -144,19 +143,19 @@ Results from my trained model
 
 ## Chalenges
 
-One of the biggest challenges was labeling images due to how time instesive it is. Additinolly making use that labels are correctly placed and that bounding boxes accuratly fit the phone proves quite tedious. Another challenge that I faced was finding enough images that met my requirements. I needed images of phones back side, since I did not want the model to be able to recognize phones from the front. Finding enough images to be able to train the model proved difficult becasue models need a large amount of images in order to be trained. To solve this problem I utilzies augmentation to provide similar images to the ones that I found this time to meet the required picutre threshold to run the training model.
+One of the biggest challenges was labeling images due to how time intensive it is. Additionally making use that labels are correctly placed and that bounding boxes accurately fit the phone proves quite tedious. Another challenge that I faced was finding enough images that met my requirements. I needed images of phones back side, since I did not want the model to be able to recognize phones from the front. Finding enough images to be able to train the model proved difficult because models need a large amount of images in order to be trained. To solve this problem I utilize augmentation to provide similar images to the ones that I found this time to meet the required picture threshold to run the training model.
 
-Another thing that was difficult was training the model myself. Orginially, I watned to train the model using a raspberry PI. This would not work for a variety of reasons, for one the raspberry PI does not have a GPU which is required to train a model using YOLOv5, and two the raspberry PI does not have enough proccesing power to be able to train it using CPU power. As a result, I used google colabs and accessed a free GPU to train the models.
+Another thing that was difficult was training the model myself. Originally, I wanted to train the model using a raspberry PI. This would not work for a variety of reasons, for one the raspberry PI does not have a GPU which is required to train a model using YOLOv5, and two the raspberry PI does not have enough processing power to be able to train it using CPU power. As a result, I used google colabs and accessed a free GPU to train the models.
 
 ## Next Steps
 
-The next step is to make the computer vision a real time tracking model on a raspberry PI. Given the PI's limited processesing power, I think it would be quite impressive to make the PI accuratly track objects with out any lag.
+The next step is to make the computer vision a real time tracking model on a raspberry PI. Given the PI's limited processing power, I think it would be quite impressive to make the PI accurately track objects without any lag.
 
 # First Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z9y6cRenPV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-My project, Raspberry Pi Object Dection through machine learning, utilizes tensorflow and YOLOv5 API in order to detect objects. My first milestone was installing OpenCV, TensorFlow, and other nessesary libraries onto the raspberry PI. To access the webcamera(), I use openCV in order to take pictures/videos and store them on the raspberry Pi. I then utilize tensorflow and the YOLOv5 model in order to recognize objects. I then wrote my own code in the detect.py program order for the raspberry PI to take a picture and then automatically analize it utilizing the model and display the result.
+My project, Raspberry Pi Object Detection through machine learning, utilizes tensorflow and YOLOv5 API in order to detect objects. My first milestone was installing OpenCV, TensorFlow, and other necessary libraries onto the raspberry PI. To access the web camera, I use openCV in order to take pictures/videos and store them on the Raspberry Pi. I then utilize tensorflow and the YOLOv5 model in order to recognize objects. I then wrote my own code in the detect.py program order for the raspberry PI to take a picture and then automatically analyze it utilizing the model and display the result.
 
 ## Nessesary equipment:
 * Computer
@@ -165,7 +164,7 @@ My project, Raspberry Pi Object Dection through machine learning, utilizes tenso
 * 4k Video Capture Card
 
 ## Progress
-In order for the project to work, it is nessesary to install the packages to run yolov5. PIP comes pre installed onto the raspberry pi 4. PIP allows for the raspberry Pi to download the nessesary packages on to the raspberry pi through the terminal.When installing packges its important to create a virtual envoirment in order to store your libraries. This prevents you from having any dependency issues when utilizing your installed libraries. To create a virtual envoirment I ran the command below in my "projects" folder
+In order for the project to work, it is necessary to install the packages to run yolov5. PIP comes pre-installed on the Raspberry Pi 4. PIP allows for the Raspberry Pi to download the necessary packages onto the Raspberry Pi through the terminal.When installing packages it's important to create a virtual environment in order to store your libraries. This prevents you from having any dependency issues when utilizing your installed libraries. To create a virtual environment I ran the command below in my "projects" folder.
 
 ```bash
 -m virtualenv env # this creates a virtual enviorment called env
@@ -184,8 +183,8 @@ sudo apt install libatlas-base-dev
 pip3 install tensorflow
 ```
 
-OpenCV is a library that allows us to edit, access, and manipulate images and videos through python
-Tensorflow is a libary made by google that allows for induviduals to create and run machine learning models on their computer
+OpenCV is a library that allows us to edit, access, and manipulate images and videos through python.
+Tensorflow is a library made by Google that allows for individuals to create and run machine learning models on their computer.
 
 Once all the libaries are installed I cloned the <a href=" ttps://github.com/ultralytics/yolov5"> YoloV5 </a> in order to get the machine learning model and be able to run the computer vision code.
 
@@ -194,21 +193,21 @@ Running the program: detect.py and feeding it an image
 <img src="TerminaDetectCMD.png"  width="100%" height="100%">
 <img src="ZidaneFound.png"  width="40%" height="30%">
 
-The result of this was the raspberry PI being able to recognize the two people in the image, Zidane and Ancelotti, and thier ties. Yolov5 can recognize 80 different objects using its pretrained model. Yolov5 is one of  many tensorflow computer vision models avaiable to use. Yolov5 works great on a raspberry pi becasue it is one of the fastest computer vision models availabe and it does not use alot of proccessing power on the raspberry pi.
+The result of this was the raspberry PI being able to recognize the two people in the image, Zidane and Ancelotti, and their ties. Yolov5 can recognize 80 different objects using its pretrained model. Yolov5 is one of  many tensorflow computer vision models available to use. Yolov5 works great on a Raspberry Pi because it is one of the fastest computer vision models available and it does not use a lot of processing power on the raspberry pi.
 
-I Modified the yolov5 detect.py code so that when it runs it would automatically take a picture using the aurdocam and run the image on the computer vision model to detect objects. The code for this is in the first milestone code section.
+I Modified the yolov5 detect.py code so that when it runs it would automatically take a picture using the arducam and run the image on the computer vision model to detect objects. The code for this is in the first milestone code section.
 
 <img src="detectWithCamera.png"  width="60%" height="40%">
 
 ## Challenges
 
-While downloading openCV is realtivly easy, downloading tensorflow proves quite difficult. Depending on what you are doing you need to download the right version of tensorflow. The version that I downloaded is tensorflow 2.1. Some Machine Models require tensorflow lite to be installed on to the raspberry pi so making sure to download the right version of tensorflow is a must. Additionally, tensorflow needs additional packages to in order to run. There are alot off different things that make downloading tensorflow on the rapsberry pi quite difficult.
+While downloading openCV is relatively easy, downloading tensorflow proves quite difficult. Depending on what you are doing you need to download the right version of tensorflow. The version that I downloaded is tensorflow 2.1. Some Machine Models require tensorflow lite to be installed on to the raspberry pi so making sure to download the right version of tensorflow is a must. Additionally, tensorflow needs additional packages in order to run. There are a lot of different things that make downloading tensorflow on the Raspberry Pi quite difficult.
 
-Another challenge I faced was directory issues. Orginally when I used the detect.py program, I would have to store the image in the same folder as the detect.py program. This is why I edited the program to automatically take a picture for me so that way I do not have to keep moving image paths around.
+Another challenge I faced was directory issues. Originally when I used the detect.py program, I would have to store the image in the same folder as the detect.py program. This is why I edited the program to automatically take a picture for me so that way I do not have to keep moving image paths around.
 
 ## Next Steps
 
-The next steps for me are to be able to train my own computer vison model to be able to detect things that I want. I want to see if I can detect the difference between an Iphone an an Android phone. I will collect and label a data set of phones and then see if it can recognize the difference between the two phones by training the model myself.
+The next steps for me are to be able to train my own computer vision model to be able to detect things that I want. I want to see if I can detect the difference between an Iphone and an Android phone. I will collect and label a data set of phones and then see if it can recognize the difference between the two phones by training the model myself.
 
 # Schematics 
 ![Headstone Image](raspPi4CamDiag.png)
