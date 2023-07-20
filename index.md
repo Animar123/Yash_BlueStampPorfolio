@@ -1,5 +1,7 @@
 # Object Detection Through Machine Learning on Raspberry PI
 
+My project, object detection on a Raspberry PI, utilizes Tensorflow and OpenCV to do real time computer vision. The project analyzes how to make machine learning models and how to implement them effectively. This includes how to make real time computer vision software without any lag and how to train computer vision models to recognize any object that I want.
+
 | **Name** | **High School** | **Field of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Yash C | Westmont High School | Computer Engineering | Rising Senior |
@@ -8,6 +10,8 @@
 ![Headstone Image](Yash-Project.png){:height="50%" width="50%"}
 
 # Final Milestone
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7wrTRztXzFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 In my third and final milestone, I implemented an object detection software using tensorflow lite that allowed me to implement real time object detection on the raspberry PI. I utilize google’s tensorflow github library to use their optimized tensorflow computer vision model on the raspberry PI for fast real time object detection and computer vision.
 
