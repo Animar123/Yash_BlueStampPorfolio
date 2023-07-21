@@ -7,7 +7,8 @@ My project, object detection on a Raspberry PI, utilizes Tensorflow and OpenCV t
 | Yash C | Westmont High School | Computer Engineering | Rising Senior |
 |:--:|:--:|:--:|:--:|
 
-![Headstone Image](Yash-Project.png){:height="50%" width="50%"} ![Headstone Image](Yash-Headshot.png){:height="50%" width="50%"}
+![Headstone Image](Yash-Project.png){:height="40%" width="40%"} 
+![Headstone Image](Yash-Headshot.png){:height="40%" width="40%"}
 
 # Final Milestone
 
