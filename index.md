@@ -7,7 +7,10 @@ My project, object detection on a Raspberry PI, utilizes Tensorflow and OpenCV t
 | Yash C | Westmont High School | Computer Engineering | Rising Senior |
 |:--:|:--:|:--:|:--:|
 
-![Headstone Image](Yash-Project.png){:height="50%" width="50%"}
+<p float="left">
+    ![Headstone Image](Yash-Project.png){:height="50%" width="50%"} 
+    ![Headstone Image](Yash-Headshot.png){:height="50%" width="50%"}
+</p>
 
 # Final Milestone
 
@@ -517,12 +520,13 @@ Here is the bill of materials for my project, excluding a peripherals and a comp
 | 4K HDMI Video Capture Card | Used as an input HDMI so that the Raspberry PI can be displayed on computer by projecting it as a webcam via usb | $16.98 | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.amazon.com/Capture-Streaming-Broadcasting-Conference-Teaching/dp/B09FLN63B3/ref=asc_df_B09FLN63B3/?tag=hyprod-20&linkCode=df0&hvadid=545942253969&hvpos=&hvnetw=g&hvrand=10440125318267030833&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032183&hvtargid=pla-1430729093730&psc=1)](https://www.amazon.com/Capture-Streaming-Broadcasting-Conference-Teaching/dp/B09FLN63B3/ref=asc_df_B09FLN63B3/?tag=hyprod-20&linkCode=df0&hvadid=545942253969&hvpos=&hvnetw=g&hvrand=10440125318267030833&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032183&hvtargid=pla-1430729093730&psc=1"> Link </a> |
 |:--:|:--:|:--:|:--:|
 
-![Headstone Image](Yash-Headshot.png){:height="50%" width="50%"}
+
 
 # Starter Project
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kJ5Td9zzF3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 This basic project allows for anyone to turn off any TV by simply turning the device on and pointing it at the TV. It then emmits a IR light that will turn of any TV. The project was great for learning how to solder and understanding basic electronics. The project consists of a batery, resistors, transistors, capasitors, and IR leds. One major struggel that I had during the project was accidentally saudering a transistor backwards. I had to desoder the transistor which took ages to do. None the less the project turned out great, and I was able to turn off my TV!
+
 <img src="starter.png"  width="40%" height="30%">
 
 ## Starter Project Code
