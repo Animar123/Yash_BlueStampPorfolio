@@ -2,7 +2,7 @@
 
 <p align="center">
     <img src="BP.png"  width="40%" height="40%">
-p>
+</p>
 
 BluePrints is an AI-powered chatbot designed to help engineering teams search, analyze, and extract insights from their documentation. It stores and processes engineering diagrams, schematics, API documentation, parts lists, and more, building a Multimodal RAG system that enables advanced search and intelligent summaries.
 
