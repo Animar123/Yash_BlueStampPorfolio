@@ -1,27 +1,39 @@
 # BluePrints: Engineering Enhanced
 
-<img src="BluePrints.png"  width="40%" height="40%">
+<img src="BP.png"  width="40%" height="40%">
 
 BluePrints is an AI-powered chatbot designed to help engineering teams search, analyze, and extract insights from their documentation. It stores and processes engineering diagrams, schematics, API documentation, parts lists, and more, building a Multimodal RAG system that enables advanced search and intelligent summaries.
 
-Currently available free for FRC students, BluePrints helps teams quickly understand designs, components, and rules, making engineering documentation more accessible and actionable. 🚀
+Currently available for free FRC students, BluePrints helps teams quickly understand designs, components, and rules, making engineering documentation more accessible and actionable. 🚀
 
+# Why BluePrints?
+1. Centralized & Multimodal Documentation: Consolidates all engineering documents, diagrams, schematics, and manuals into a single, searchable platform that supports both text and visual content.
+2. Enhanced Collaboration & Onboarding: Promotes team collaboration, reduces misunderstandings, and simplifies the onboarding process for new engineers.
+3. Quick Troubleshooting & Decision-Making: Enables faster troubleshooting with easy access to specifications and previous design notes, supporting timely decisions.
+4. Version Control & Standardization: Tracks document versions and ensures standardized practices across the team, improving consistency and quality.
+5. Customizable for Teams & Compliance: Adaptable to different engineering teams (e.g., robotics, product design) and supports regulatory compliance with up-to-date documentation.
 
-# How it Works
+# How it Works:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7wrTRztXzFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Demo on how BluePrints work!
+Demo on how BluePrints work for FRC documentation!
 
 ## Documents Used
-<show images of pdfs
-Used over 700 pages of detailed engineering schematics, diagrams, and rule books for building FRC robots. Utilized Unstructured to break down these pdfs into thousands of  images, table, and text chunks for analysis. BluePrints has custom methods to do comprehensive analysis on engineering diagrams and drawings to create advanced insights for Multimodal RAG pipeline
+
+BluePrints leverages over 700 pages of detailed engineering schematics, diagrams, and rulebooks used in building FRC robots. By utilizing Unstructured, we break down these documents into thousands of text, image, and table chunks for in-depth analysis. Our custom-built methods enable comprehensive analysis of engineering diagrams and drawings, providing advanced insights to power our Multimodal RAG pipeline.
+
+some of the thousands of images used
+<p float="left">
+    <img src="tf comparison.png"  width="40%" height="30%">
+    <img src="tfl comparison.png"  width="40%" height="30%">
+</p>
 
 ## RAG Pipeline
-The embeding model model used is NOMIC's GPT4ALL embeding function and integrated it with Chroma DB multivector store to store vector and doc stores (store images, tables, and text). The RAG pipline is built using gpt-4o-mini for document summarization and analysis
+BluePrints uses NOMIC’s GPT4ALL embedding model to process and understand complex engineering documents. This model is seamlessly integrated with the Chroma DB multivector store, enabling the storage of a wide range of data types—images, tables, and text—in both vector and document stores. The integration allows for powerful, multi-modal retrieval and analysis of engineering data. The RAG pipeline, powered by GPT-4o-mini, drives document summarization and advanced analysis, providing clear, actionable insights from engineering schematics, rulebooks, and other complex documentation.
 
 ## GUI
-BluePrints currently utilizes streamlit to implement the chat bot interface for the RoboDocs FRC chat. The chat bot takes in questions about documentation and provides summarization and advanced insights on how parts work/documentation work and suplements with nessary images and diagrams when nessary.
+luePrints leverages Streamlit to power the user-friendly chatbot interface for RoboDocs FRC. The chatbot efficiently handles inquiries related to engineering documentation, offering comprehensive summarizations and advanced insights into part functionality and document details. When necessary, it supplements responses with relevant images, diagrams, and schematics, ensuring users receive the most informative and visual context to understand the documentation better.
 
 Private integration of BluePrints is comming soon!
 ## Integration for Buisness
