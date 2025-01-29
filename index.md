@@ -1,4 +1,4 @@
-# BluePrints: Engineering Documnetation Made Easier
+# BluePrints: Engineering Enhanced
 
 <img src="BluePrints.png"  width="40%" height="40%">
 
@@ -14,16 +14,31 @@ Currently available free for FRC students, BluePrints helps teams quickly unders
 Demo on how BluePrints work!
 
 ## Documents Used
+<show images of pdfs
+Used over 700 pages of detailed engineering schematics, diagrams, and rule books for building FRC robots. Utilized Unstructured to break down these pdfs into thousands of  images, table, and text chunks for analysis. BluePrints has custom methods to do comprehensive analysis on engineering diagrams and drawings to create advanced insights for Multimodal RAG pipeline
 
-Used over 700 pages of detailed engineering schematics, diagrams, and rule books for building FRC robots. Utilized Unstructured to break down these pdfs into chunks of images, tables, and text for analysis. Built method to do comprehensive analysis on engineering diagrams and drawings to create advanced insights for Multimodal RAG pipeline
+## RAG Pipeline
+The embeding model model used is NOMIC's GPT4ALL embeding function and integrated it with Chroma DB multivector store to store vector and doc stores (store images, tables, and text). The RAG pipline is built using gpt-4o-mini for document summarization and analysis
 
-```bash
-pip install tflite-support
-# I have already downloaded openCV in a previos milestone
-# Open CV is nessesary to run the live streamed computer vision model
-pip install openCV-python
-```
-After installing the necessary packages, I needed to get the computer vision model that runs on the raspberry PI made by tensorflow off github. To do this I cloned the "examples'' from the tensorflow library off github
+## GUI
+BluePrints currently utilizes streamlit to implement the chat bot interface for the RoboDocs FRC chat. The chat bot takes in questions about documentation and provides summarization and advanced insights on how parts work/documentation work and suplements with nessary images and diagrams when nessary.
+
+Private integration of BluePrints is comming soon!
+## Integration for Buisness
+Integration for buisness to be able to provide private engineering documentation and parts to BluePrints is comming soon! Blueprints will integrate slack and discord to provide docmenation help for engineers on your team.
+
+# Try BluePrints Your Self
+You can download the RoboDocs Chat bot and run it privately your self!
+
+## Recomended prompts
+1. What does a pdh do?
+2. What are swerve modules?
+3. What is the difference between a rev vortex motor and kraken motor?
+4. What is crimping?
+5. What does the field map look like?
+6. What are bumper rules?
+7. How do elevators work?
+8. What are different types of intakes?
 
 ```bash
 git clone https://github.com/tensorflow/examples.git
@@ -52,56 +67,6 @@ Compared to running a normal tensorflow object detection model like YOLOv5 in re
     <img src="tf comparison.png"  width="40%" height="30%">
     <img src="tfl comparison.png"  width="40%" height="30%">
 </p>
-
-## Challenges
-
-One of the biggest challenges with this final milestone was understanding how tensorflow lite worked and making sure that I had the right dependencies for the detection software for me to work. While tensorflow lite is similar to tensorflow, it has some key differences, because it can only be used for making inferences and is optimized to do so it uses different commands and different functions than tensorflow. Making sure that I understood those differences was challenging but important in being able to understand how my code worked. Additionally, because I had already installed tensorflow, I had to make sure that I had the correct dependencies in the right folder in my virtual environment to make sure that tensorflow lite had the necessary requirements.
-
-## Next Steps
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Lyh84KMqUPI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-Following the video above, I am going to combine the apps that I have developed in my first and second milestone with my third milestone to create a realtime computervison model on the raspberry PI using tensorflow lite.
-
-
-# Second Milestone
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/orN371a4sUM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-In my second milestone, I developed my own model and trained it in order to be able to recognize the difference between an iphone and an android phone. I utilized a scrapper program that would download hundreds of images off the web and then label these images for the yolov5 program and roboflow model to train on. I would then use these train models to create a computer vision program that can recognize the difference.
-
-## Progress
-To train a computer model, the first thing that I need are images, lots of them. Small models need only a couple hundred images but larger computer vision models are trained on hundreds of thousands of images. Since it would take a long time to individually download images from the internet I used a web scraper for this job for me. I can specify the amount of images I want to download for each query that I want to search.
-
-| **Search Quire** | **Number of images** |
-|:--:|:--:|
-| Iphone | 100 |
-|:--:|:--:|
-| Iphone 12 | 20 |
-|:--:|:--:|
-| Iphone 13 | 20 |
-|:--:|:--:|
-| Iphone 14 | 20 |
-|:--:|:--:|
-| Google Pixel 4 | 20 |
-|:--:|:--:|
-| Google Pixel 6 | 20 |
-|:--:|:--:|
-| Google Pixels | 100 |
-|:--:|:--:|
-| OnePlus 7pro | 50 |
-|:--:|:--:|
-| OnePlus phone | 50 |
-|:--:|:--:|
-| Samsung S21 | 20 |
-|:--:|:--:|
-| Samsung S22 | 20 |
-|:--:|:--:|
-| **Total Number of Images** | **480** |
-|:--:|:--:|
-
-I utilized this <a href=" ttps://github.com/ultralytics/yolov5"> web scraper </a> scrapper of github. It searches google images for the top images for each quiry and downloads ammount that I desire for each category.
-
 
 
 <pre style="background:#fdfdfd:border:none; height:40pc">
@@ -365,95 +330,4 @@ cap.release()
     
 
 ```
-Video testing code on Raspberry Pi 4
 
-``` python
-import cv2
- 
-vid = cv2.VideoCapture(0) # define a video capture object
- 
-while(True):
-
-    ret, frame = vid.read() # Capture the video frame by frame
- 
-    
-    cv2.imshow('frame', frame) # Display the resulting frame
-     
-    if cv2.waitKey(1) & 0xFF == ord('q'):  # the 'q' button is set as the quitting button 
-        break
- 
-vid.release() # After the loop release the cap object
-cv2.destroyAllWindows() # Destroy all the windows
-```
-
-# Bill of Materials
-Here is the bill of materials for my project, excluding a peripherals and a computer these are the nessary parts in order to recreate this project.
-
-| **Part** | **Note** | **Price** | **Link** |
-|:--:|:--:|:--:|:--:|
-| Raspberry Pi 4(64 bit)| Is a credit card sized computer that does a majority of the processing for the Computer Vision software | $82.00 | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.amazon.com/Raspberry-Model-2019-Quad-Bluetooth/dp/B07TC2BK1X/ref=asc_df_B07TD42S27/?tag=&linkCode=df0&hvadid=380013417597&hvpos=&hvnetw=g&hvrand=7380946922219675202&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032183&hvtargid=pla-774661502856&ref=&adgrpid=77922879259&th=1"> Link </a> |
-|:--:|:--:|:--:|:--:|
-| Arducam for Raspberry Pi Camera Module 3 | Is a small modular camera that plugs directly into the Raspberry Pi's CSI port | $31.00 | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.amazon.com/dp/B0C5D97DRJ/ref=sspa_dk_detail_4?psc=1&pd_rd_i=B0C5D97DRJ&pd_rd_w=wkv1F&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&pf_rd_p=f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&pf_rd_r=QFNHR0E4M43AT1QZ6JVS&pd_rd_wg=VsP9B&pd_rd_r=9ab21125-f61c-4264-b4c7-9605bedb7164&s=electronics&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw"> Link </a> |
-|:--:|:--:|:--:|:--:|
-| 4K HDMI Video Capture Card | Used as an input HDMI so that the Raspberry PI can be displayed on computer by projecting it as a webcam via usb | $16.98 | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.amazon.com/Capture-Streaming-Broadcasting-Conference-Teaching/dp/B09FLN63B3/ref=asc_df_B09FLN63B3/?tag=hyprod-20&linkCode=df0&hvadid=545942253969&hvpos=&hvnetw=g&hvrand=10440125318267030833&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032183&hvtargid=pla-1430729093730&psc=1)](https://www.amazon.com/Capture-Streaming-Broadcasting-Conference-Teaching/dp/B09FLN63B3/ref=asc_df_B09FLN63B3/?tag=hyprod-20&linkCode=df0&hvadid=545942253969&hvpos=&hvnetw=g&hvrand=10440125318267030833&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032183&hvtargid=pla-1430729093730&psc=1"> Link </a> |
-|:--:|:--:|:--:|:--:|
-
-
-
-# Starter Project
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kJ5Td9zzF3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-This basic project allows for anyone to turn off any TV by simply turning the device on and pointing it at the TV. It then emmits a IR light that will turn of any TV. The project was great for learning how to solder and understanding basic electronics. The project consists of a batery, resistors, transistors, capasitors, and IR leds. One major struggel that I had during the project was accidentally saudering a transistor backwards. I had to desoder the transistor which took ages to do. None the less the project turned out great, and I was able to turn off my TV!
-
-<img src="starter.png"  width="40%" height="30%">
-
-## Starter Project Code
-
-```c++
-// Code 000 -- Sony, Baur, Neckermann, Otto Versand, Palladium, Quelle, SEI, Sinudyne, Sonolor, Universu
-const struct powercode sonyCode PROGMEM = {
-  freq_to_timerval(38400), // 38.4 KHz  
-  {
-  {240, 60},{120, 60},{60 , 60},{120, 60},{60 , 60},
-   {120, 60},{60 , 60},{60 , 60},{120, 60},{60 , 60},
-   {60 , 60},{60 , 60},{60 , 2700},{240, 60},{120, 60},
-   {60 , 60},{120, 60},{60 , 60},{120, 60},{60 , 60},
-   {60 , 60},{120, 60},{60 , 60},{60 , 60},{60 , 60},
-   {60 , 0}// end of code
-  }
-};
-
-const uint16_t code_na000Times[] PROGMEM = 
-{
-   60, 60,
-   60, 2700,
-   120, 60,
-   240, 60,
-};
-
-// The structure of compressed code entries
-struct IrCode 
-{
-  uint8_t timer_val;
-  uint8_t numpairs;
-  uint8_t bitcompression;
-  uint16_t const *times;
-  uint8_t codes[];
-};
-const struct IrCode code_na000Code PROGMEM = 
-{
-        freq_to_timerval(38400),
-        26,             // # of pairs
-        2,              // # of bits per index
-        code_na000Times,
-        {
-                0xE2,
-                0x20,
-                0x80,
-                0x78,
-                0x88,
-                0x20,
-                0x10,
-        }
-};
-```
