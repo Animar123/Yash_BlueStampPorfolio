@@ -36,7 +36,13 @@ Some of the thousands of images and tabels used:
 BluePrints uses NOMIC’s GPT4ALL embedding model to process and understand complex engineering documents. This model is seamlessly integrated with the Chroma DB multivector store, enabling the storage of a wide range of data types—images, tables, and text—in both vector and document stores. The integration allows for powerful, multi-modal retrieval and analysis of engineering data. The RAG pipeline, powered by GPT-4o-mini, drives document summarization and advanced analysis, providing clear, actionable insights from engineering schematics, rulebooks, and other complex documentation.
 
 ## GUI
-luePrints leverages Streamlit to power the user-friendly chatbot interface for RoboDocs FRC. The chatbot efficiently handles inquiries related to engineering documentation, offering comprehensive summarizations and advanced insights into part functionality and document details. When necessary, it supplements responses with relevant images, diagrams, and schematics, ensuring users receive the most informative and visual context to understand the documentation better.
+BluePrints leverages Streamlit to power the user-friendly chatbot interface for RoboDocs FRC. The chatbot efficiently handles inquiries related to engineering documentation, offering comprehensive summarizations and advanced insights into part functionality and document details. When necessary, it supplements responses with relevant images, diagrams, and schematics, ensuring users receive the most informative and visual context to understand the documentation better.
+<p float="left">
+    <img src="BPEG1.png"  width="40%" height="30%">
+    <img src="BPEG2.png"  width="40%" height="30%">
+    <img src="BPEG3.png"  width="40%" height="30%">
+    <img src="BPEG4.png"  width="40%" height="30%">
+</p>
 
 Private integration of BluePrints is comming soon!
 ## Integration for Buisness
