@@ -44,6 +44,8 @@ BluePrints leverages Streamlit to power the user-friendly chatbot interface for 
 
 Private integration of BluePrints is comming soon!
 ## Integration for Buisness
+<img src="sd.png"  width="40%" height="30%">
+
 Integration for buisness to be able to provide private engineering documentation and parts to BluePrints is comming soon! Blueprints will integrate slack and discord to provide docmenation help for engineers on your team.
 
 # Try BluePrints Your Self
@@ -54,12 +56,12 @@ Install nessary packages in vurtual environment:
 pip install streamlit openai langchain gpt4all chroma
 ```
 Dowload this zip:
-[my link]
+[app and emmbeddings zip](https://drive.google.com/file/d/1RpIubAJ80z87E9CvSYaqWWeuY_YbhkpA/view?usp=sharing)
 
 run app.py using streamlit:
 
 ```bash
-pip  streamlit run app.py
+streamlit run app.py
 ```
 
 ```python
