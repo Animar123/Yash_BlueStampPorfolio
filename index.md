@@ -1,11 +1,9 @@
-# Object Detection Through Machine Learning on Raspberry PI
+# BluePrints: Engineering Documnetation Made Easier
 
-My project, object detection on a Raspberry PI, utilizes Tensorflow and OpenCV to do real time computer vision. The project analyzes how to make machine learning models and how to implement them effectively. This includes how to make real time computer vision software without any lag and how to train computer vision models to recognize any object that I want.
+BluePrints is an AI-powered chatbot designed to help engineering teams search, analyze, and extract insights from their documentation. It stores and processes engineering diagrams, schematics, API documentation, parts lists, and more, building a Multimodal RAG system that enables advanced search and intelligent summaries.
 
-| **Name** | **High School** | **Field of Interest** | **Grade** |
-|:--:|:--:|:--:|:--:|
-| Yash C | Westmont High School | Computer Engineering | Rising Senior |
-|:--:|:--:|:--:|:--:|
+Currently available free for FRC students, BluePrints helps teams quickly understand designs, components, and rules, making engineering documentation more accessible and actionable. 🚀
+
 
 ![Headstone Image](Yash-Project.png){:height="40%" width="40%"} 
 ![Headstone Image](Yash-Headshot.png){:height="40%" width="40%"}
