@@ -22,11 +22,14 @@ Demo on how BluePrints work for FRC documentation!
 ## Documents Used
 
 BluePrints leverages over 700 pages of detailed engineering schematics, diagrams, and rulebooks used in building FRC robots. By utilizing Unstructured, we break down these documents into thousands of text, image, and table chunks for in-depth analysis. Our custom-built methods enable comprehensive analysis of engineering diagrams and drawings, providing advanced insights to power our Multimodal RAG pipeline.
+[Access the FRC Docs Folder](https://drive.google.com/drive/folders/1AoIong1_LW2cgQlHzQRbILSI-UUMfk7g?usp=sharing)
 
-some of the thousands of images used
+Some of the thousands of images and tabels used:
 <p float="left">
-    <img src="tf comparison.png"  width="40%" height="30%">
-    <img src="tfl comparison.png"  width="40%" height="30%">
+    <img src="BPEG1.png"  width="40%" height="30%">
+    <img src="BPEG2.png"  width="40%" height="30%">
+    <img src="BPEG3.png"  width="40%" height="30%">
+    <img src="BPEG4.png"  width="40%" height="30%">
 </p>
 
 ## RAG Pipeline
