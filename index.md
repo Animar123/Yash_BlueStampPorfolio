@@ -17,7 +17,7 @@ Currently available for free FRC students, BluePrints helps teams quickly unders
 
 # How it Works:
 
-<iframe width="560" height="315" src="https://youtu.be/0P4ooL6UkiQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=0P4ooL6UkiQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Demo on how BluePrints work for FRC documentation!
 
