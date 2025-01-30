@@ -1,4 +1,4 @@
-# What is BluePrints: Engineering Enhanced
+# BluePrints: Engineering Enhanced
 
 <p align="center">
     <img src="BP.png"  width="40%" height="40%">
