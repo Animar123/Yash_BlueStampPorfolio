@@ -58,7 +58,7 @@ Install nessary packages in vurtual environment:
 pip install streamlit openai langchain gpt4all chroma
 ```
 Dowload this zip:
-[app and emmbeddings zip](https://drive.google.com/file/d/1RpIubAJ80z87E9CvSYaqWWeuY_YbhkpA/view?usp=sharing)
+[app and emmbeddings zip](https://drive.google.com/file/d/1eOLqNvWJFyRpkqdqkh-0IOuzYST1f5hF/view?usp=sharing)
 
 run app.py using streamlit:
 
